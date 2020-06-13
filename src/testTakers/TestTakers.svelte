@@ -1,8 +1,8 @@
 <script>
   import { onMount } from "svelte";
   import { state, getTestTakersAction } from "../store";
-  import TestTakerList from './TestTakerList.svelte';
-  import TestTakerDetail from './TestTakerDetail.svelte';
+  import TestTakerList from "./TestTakerList.svelte";
+  import TestTakerDetail from "./TestTakerDetail.svelte";
 
   const { testTakers } = state;
 
@@ -13,6 +13,15 @@
   async function getTestTakers() {
     await getTestTakersAction();
   }
+
+  function clear() {
+      selected = null;
+  }
+
+  function select({ detail: user }) {
+    selected = user;
+    console.log(`selected ${user.userId}`);
+  }
 </script>
 
 <div class="content-container">
@@ -20,9 +29,9 @@
     {#if $testTakers}
       <div class="column is-8">
         {#if !selected}
-          <TestTakerList testTakers={$testTakers} />
+          <TestTakerList testTakers={$testTakers} on:selected={select} />
         {:else}
-          <TestTakerDetail />
+          <TestTakerDetail passedTestTaker={selected} on:unselect={clear} />
         {/if}
       </div>
     {/if}

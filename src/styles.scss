@@ -12,16 +12,21 @@ main {
 }
 
 $shade-light: #fafafa;
+$link: #00b3e6;
 
 .not-found {
-    .title {
-      letter-spacing: 0px;
-      font-weight: normal;
-      font-size: 24px;
-      text-transform: none;
-    }
+  .title {
+    letter-spacing: 0px;
+    font-weight: normal;
+    font-size: 24px;
+    text-transform: none;
   }
+}
 
+ul {
+  list-style: none;
+  padding: 0;
+}
 ul.list {
   box-shadow: none;
 }
@@ -36,3 +41,25 @@ div.card-content {
   margin-bottom: 2em;
 }
 
+button.link {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button.exit {
+  margin-top: 20px;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.card-footer button {
+  font-size: 16px;
+  i {
+    margin-right: 10px;
+  }
+  color: #888;
+  &:hover {
+    color: $link;
+  }
+}
