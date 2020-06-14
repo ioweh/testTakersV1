@@ -44,6 +44,7 @@ npm run test
 
 The compiler turns each component into a regular JavaScript class — just import it and instantiate with new:
 
+```bash
 import App from './App.svelte';
 
 const app = new App({
@@ -51,3 +52,4 @@ const app = new App({
 	props: {
 	}
 });
+```
