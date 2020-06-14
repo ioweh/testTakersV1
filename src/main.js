@@ -1,6 +1,6 @@
-import App from './App.svelte';
+import TestTakersList from './TestTakersList.svelte';
 
-const app = new App({
+const app = new TestTakersList({
 	target: document.body,
 	props: {
 	}

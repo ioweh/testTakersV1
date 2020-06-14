@@ -51,9 +51,9 @@ npm run test
 The compiler turns the component into a regular JavaScript class — just import it and instantiate with new:
 
 ```bash
-import App from './App.svelte';
+import TestTakersList from './TestTakersList.svelte';
 
-const app = new App({
+const app = new TestTakersList({
 	target: document.body,
 	props: {
 	}
