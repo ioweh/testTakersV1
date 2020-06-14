@@ -48,7 +48,7 @@ npm run test
 
 ## How to reuse the code:
 
-The compiler turns each component into a regular JavaScript class — just import it and instantiate with new:
+The compiler turns the component into a regular JavaScript class — just import it and instantiate with new:
 
 ```bash
 import App from './App.svelte';
