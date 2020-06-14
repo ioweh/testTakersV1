@@ -6,10 +6,16 @@ By Oleg Ilinets
 
 ## Getting started
 
+Clone this repository:
+
+```bash
+git clone https://github.com/ioweh/testTakersV1.git
+cd testTakersV1
+```
+
 Install the dependencies...
 
 ```bash
-cd test-takers
 npm install
 ```
 
