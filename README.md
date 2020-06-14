@@ -39,3 +39,15 @@ The tests can be executed with this command:
 ```bash
 npm run test
 ```
+
+## How to reuse the code:
+
+The compiler turns each component into a regular JavaScript class — just import it and instantiate with new:
+
+import App from './App.svelte';
+
+const app = new App({
+	target: document.body,
+	props: {
+	}
+});
